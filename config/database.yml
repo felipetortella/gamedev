@@ -80,7 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['GAMEDEV_DATABASE_DATABASE'] %>
-  username: <%= ENV['GAMEDEV_DATABASE_USERNAME'] %>
-  password: <%= ENV['GAMEDEV_DATABASE_PASSWORD'] %>
-  host: <%= ENV['GAMEDEV_DATABASE_HOST'] %>
+  url:  <%= ENV['DATABASE_URL'] %>
