@@ -1,27 +1,620 @@
-<p id="notice"><%= notice %></p>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
 
-<h1>Landings</h1>
+        <link rel="shortcut icon" href="<%= image_url("favicon.ico") %>">
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <title>Zodkoo | Bootstrap Landing Template</title>
 
-  <tbody>
-    <% @landings.each do |landing| %>
-      <tr>
-        <td><%= landing.email %></td>
-        <td><%= link_to 'Show', landing %></td>
-        <td><%= link_to 'Edit', edit_landing_path(landing) %></td>
-        <td><%= link_to 'Destroy', landing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <!-- Google Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
-<br>
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
 
-<%= link_to 'New Landing', new_landing_path %>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-78002311-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script>
+$(function(){
+
+    $("#typed").typed({
+        // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+        stringsElement: $('#typed-strings'),
+        typeSpeed: 40,
+        backDelay: 800,
+        loop: true,
+        contentType: 'html', // or text
+        // defaults to false for infinite loop
+        loopCount: false,
+        callback: function(){ foo(); },
+        resetCallback: function() { newTyped(); }
+    });
+
+    $(".reset").click(function(){
+        $("#typed").typed('reset');
+    });
+
+});
+
+function newTyped(){ /* A new typed object */ }
+
+function foo(){ console.log("Callback"); }
+
+</script>
+<style>
+    /* code for animated blinking cursor */
+    .typed-cursor{
+        opacity: 1;
+        font-weight: 100;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        -ms-animation: blink 0.7s infinite;
+        -o-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-ms-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-o-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+</style>
+
+    </head>
+
+
+    <body data-spy="scroll" data-target="#navbar-menu">
+
+        <!-- Navbar -->
+        <div class="navbar navbar-custom sticky" role="navigation" id="sticky-nav">
+            <div class="container">
+
+                <!-- Navbar-header -->
+                <div class="navbar-header">
+
+                    <!-- Responsive menu button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand logo" href="http://coderthemes.com/zodkoo_1.1/index.html">
+                        Zodkoo
+                    </a>
+
+                </div>
+                <!-- end navbar-header -->
+
+                <!-- menu -->
+                <div class="navbar-collapse collapse" id="navbar-menu">
+
+                    <!-- Navbar left -->
+                    <ul class="nav navbar-nav nav-custom-left">
+                        <li class="active">
+                            <a href="index_6.html#home" class="nav-link">Home</a>
+                        </li>
+                        <li>
+                            <a href="index_6.html#features" class="nav-link">Features</a>
+                        </li>
+                        <li>
+                            <a href="index_6.html#pricing" class="nav-link">Plans</a>
+                        </li>
+                        <li>
+                            <a href="index_6.html#clients" class="nav-link">Clients</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="index_6.html#" data-toggle="dropdown">
+                                Pages
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu arrow">
+                                <li><a href="http://coderthemes.com/zodkoo_1.1/light/about-us.html">About Us</a></li>
+                                <li><a href="http://coderthemes.com/zodkoo_1.1/light/contact.html">Contact</a></li>
+                                <li><a href="http://coderthemes.com/zodkoo_1.1/light/faq.html">FAQ</a></li>
+                                <li><a href="http://coderthemes.com/zodkoo_1.1/light/jobs.html">Jobs</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar right -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="index_6.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="index_6.html" class="btn btn-white-fill navbar-btn">Try for Free</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--/Menu -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- End navbar-custom -->
+
+
+        <!-- HOME -->
+        <section class="home bg-img-2" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="home-wrapper">
+                            <h1 class="text-white">Zodkoo is a fully responsive landing page template</h1>
+                            <!-- <h4 class="text-light">Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</h4> -->
+                            <!-- <div class="type-wrap"> -->
+                            <div id="typed-strings">
+                              <span>Zodkoo is a fully responsive landing page built using the latest <strong>Bootstrap</strong> framework.</span>
+                              <p>It's designed for describing your app, agency or business.</p>
+                              <p>The clean and well commented code allows easy customization of the theme.</p>
+                            </div>
+                            <span class="text-light" id="typed" style="white-space:pre;"> </span>
+                            <!-- </div> -->
+                            <p><a href="index_6.html" class="btn btn-custom">Get Started</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HOME -->
+
+
+
+        <!-- Features Alt -->
+        <section class="section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <div class="title-box-icon">
+                                <i class="pe-7s-medal"></i>
+                                <h3 class="title">Clean and Ultra Modern Design</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="feat-description">
+                            <h4 class="text-muted">Praesent et viverra massa non varius magna eget nibh vitae velit posuere efficitur.</h4>
+                            <p class="text-muted">The clean and well commented code allows easy customization of the theme.It's designed for describing your app, agency or business.We put a lot of effort in design, as it’s the most important ingredient of successful website.Sed ut perspiciatis unde omnis iste natus error sit.We put a lot of effort in design, as it’s the most important ingredient of successful website.</p>
+
+                            <a href="index_6.html" class="btn btn-custom">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-7">
+                      <%= image_tag("macbook.png", :class => "img-responsive") %>
+                    </div>
+
+                </div><!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end features alt -->
+
+
+        <!-- Features -->
+        <section class="section bg-light" id="features">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h3 class="title">It's designed for describing your app, agency or business</h3>
+                        <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br/> designed for describing your app, agency or business.</p>
+                    </div>
+                </div> <!-- end row -->
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="features-box">
+                            <i class="pe-7s-rocket"></i>
+                            <h4>Strategy Solutions</h4>
+                            <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="features-box">
+                            <i class="pe-7s-science"></i>
+                            <h4>Digital Design</h4>
+                            <p class="text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="features-box">
+                            <i class="pe-7s-display1"></i>
+                            <h4>Analytics Solutions</h4>
+                            <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+
+                </div> <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="features-box">
+                            <i class="pe-7s-date"></i>
+                            <h4>Strategy Solutions</h4>
+                            <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="features-box">
+                            <i class="pe-7s-credit"></i>
+                            <h4>Digital Design</h4>
+                            <p class="text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="features-box">
+                            <i class="pe-7s-headphones"></i>
+                            <h4>Analytics Solutions</h4>
+                            <p class="text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                        </div>
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end Features -->
+
+
+
+        <!-- PRICING -->
+        <section class="section" id="pricing">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h3 class="title">Choose your perfect plan</h3>
+                        <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br> designed for describing your app, agency or business.</p>
+                    </div>
+                </div> <!-- end row -->
+
+
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="row">
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-4 col-md-4">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Basic</h3>
+                                        <h2 class="plan-price">$19</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>10 GB Storege</li>
+                                        <li> <i class="pe-7s-graph"></i>500 GB Bandwidth</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Email Support</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="index_6.html#" class="btn btn-sm btn-custom">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-4 col-md-4">
+                                <div class="inner-box active">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Premium</h3>
+                                        <h2 class="plan-price">$29</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>10 GB Storege</li>
+                                        <li> <i class="pe-7s-graph"></i>500 GB Bandwidth</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Email Support</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="index_6.html#" class="btn btn-sm btn-custom">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Pricing Column-->
+                            <article class="pricing-column col-lg-4 col-md-4">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Developer</h3>
+                                        <h2 class="plan-price">$39</h2>
+                                        <div class="plan-duration">Per Month</div>
+                                    </div>
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>10 GB Storege</li>
+                                        <li> <i class="pe-7s-graph"></i>500 GB Bandwidth</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Email Support</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="index_6.html#" class="btn btn-sm btn-custom">Signup Now</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div><!-- end col -->
+                </div>
+                 <!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- End Pricing -->
+
+
+        <!-- Clients -->
+        <section class="section bg-light" id="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h3 class="title">Trusted by Thousands</h3>
+                        <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br/> designed for describing your app, agency or business.</p>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row text-center">
+                    <div class="col-sm-12">
+                        <ul class="list-inline client-list">
+                            <li><a href="index_6.html" title="Microsoft"><%= image_tag("clients/microsoft.png")%></a></li>
+                            <li><a href="index_6.html" title="Google"><%= image_tag("clients/google.png")%></a></li>
+                            <li><a href="index_6.html" title="Instagram"><%= image_tag("clients/instagram.png")%></a></li>
+                            <li><a href="index_6.html" title="Converse"><%= image_tag("clients/converse.png")%></a></li>
+                        </ul>
+
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="testimonial-description text-left">
+                                    <p class="text-muted">
+                                        “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
+                                    </p>
+                                </div>
+
+                                <div class="testimonial-user-info user-info text-left">
+                                    <div class="testimonial-user-thumb user-thumb">
+                                        <%= image_tag("user.jpg")%>
+                                    </div>
+                                    <div class="testimonial-user-txt user-text">
+                                        <label class="testimonial-user-name user-name">Calebogden</label>
+                                        <p class="testimonial-user-position user-position text-muted">Another company , City</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-description text-left">
+                                    <p class="text-muted">
+                                        “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
+                                    </p>
+                                </div>
+
+                                <div class="testimonial-user-info user-info text-left">
+                                    <div class="testimonial-user-thumb user-thumb">
+                                        <%= image_tag("user2.jpg")%>
+                                    </div>
+                                    <div class="testimonial-user-txt user-text">
+                                        <label class="testimonial-user-name user-name">Dancounsell</label>
+                                        <p class="testimonial-user-position user-position text-muted">Another company , City</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-description text-left">
+                                    <p class="text-muted">
+                                        “ There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.”
+                                    </p>
+                                </div>
+
+                                <div class="testimonial-user-info user-info text-left">
+                                    <div class="testimonial-user-thumb user-thumb">
+                                        <%= image_tag("user3.jpg")%>
+                                    </div>
+                                    <div class="testimonial-user-txt user-text">
+                                        <label class="testimonial-user-name user-name">Indianguru</label>
+                                        <p class="testimonial-user-position user-position text-muted">Another company , City</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> <!-- end Col -->
+
+                </div><!-- end row -->
+
+            </div>
+        </section>
+        <!--End  Clients -->
+
+
+        <!-- Subscribe -->
+        <section class="section bg-custom">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h3 class="title text-white">Be engaged Newsletter</h3>
+                        <p class="text-light sub-title">The clean and well commented code allows easy customization of the theme.It's <br> designed for describing your app, agency or business.</p>
+                    </div>
+                </div><!-- End row -->
+
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <form class="text-center" action="http://coderthemes.us13.list-manage.com/subscribe/post?u=0cc5de5f50afa8474a1006b6b&amp;id=e0e46dd0d1"
+                              id="subscribe-form" method="get">
+                            <div class="form-group m-b-0">
+                                <input type="email" class="form-control input-subscribe" id="mce-EMAIL" name="EMAIL"
+                                       placeholder="Enter e-mail address" required>
+                                <label for="mce-EMAIL"></label>
+                            </div>
+
+                            <button type="submit" class="btn btn-white-fill">Subscribe</button>
+                            <p class="text-light">
+                                <small>You can un-subscribe at any time.</small>
+                            </p>
+                        </form>
+                    </div>
+                </div><!-- End row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- End Subscribe -->
+
+
+
+        <!-- FOOTER -->
+        <footer class="section bg-gray footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <h5>Zodkoo</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index_6.html">Home</a></li>
+                            <li><a href="index_6.html">Features</a></li>
+                            <li><a href="index_6.html">Team</a></li>
+                            <li><a href="index_6.html">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <h5>Social</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index_6.html">Facebook</a></li>
+                            <li><a href="index_6.html">Twitter</a></li>
+                            <li><a href="index_6.html">Behance</a></li>
+                            <li><a href="index_6.html">Dribbble</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <h5>Support</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index_6.html">Help & Support</a></li>
+                            <li><a href="index_6.html">Privacy Policy</a></li>
+                            <li><a href="index_6.html">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <h5>Contact</h5>
+                        <address>
+                            795 Folsom Ave, Suite 600<br>
+                            San Francisco, CA 94107<br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890<br/>
+                            E: <a href="mailto:#">email@email.com</a>
+                        </address>
+                    </div>
+
+                </div> <!-- end row -->
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="footer-alt text-center">
+                            <p class="text-muted m-b-0">2016 © Zodkoo</p>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+
+            </div> <!-- end container -->
+        </footer>
+        <!-- END FOOTER -->
+
+
+        <!-- Back to top -->
+        <a href="index_6.html#" class="back-to-top" id="back-to-top"> <i class="pe-7s-angle-up"> </i> </a>
+
+        <!-- Style switcher -->
+        <div id="style-switcher" style="left: 0px;">
+            <div>
+                <h3>Choose your color</h3>
+                <ul class="pattern">
+                    <li>
+                        <a class="color1" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color2" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color3" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color4" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color5" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color6" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color7" href="index_6.html#"></a>
+                    </li>
+                    <li>
+                        <a class="color8" href="index_6.html#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <a href="index_6.html#" class="settings"><i class="pe-7s-config"></i></a>
+            </div>
+        </div>
+        <!-- end Style switcher -->
+
+    </body>
+</html>
