@@ -1,3 +1,4 @@
+<% default_url_options %>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -129,23 +130,23 @@ function foo(){ console.log("Callback"); }
                     <!-- Navbar left -->
                     <ul class="nav navbar-nav nav-custom-left">
                         <li class="active">
-                            <a href="#home" class="nav-link">Home</a>
+                            <a href="#home" class="nav-link"><%= t 'Home' %></a>
                         </li>
                         <li>
-                            <a href="#features" class="nav-link">Features</a>
+                            <a href="#features" class="nav-link"><%= t 'features' %></a>
                         </li>
                         <li>
-                            <a href="#subscribe" class="nav-link">Subscribe</a>
+                            <a href="#subscribe" class="nav-link"><%= t 'Subscribe' %></a>
                         </li>
                     </ul>
 
                     <!-- Navbar right -->
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="index_6.html">Login</a>
+                            <a href="index_6.html"><%= t 'Login' %></a>
                         </li>
                         <li>
-                            <a href="index_6.html" class="btn btn-white-fill navbar-btn">Try for Free</a>
+                            <a href="index_6.html" class="btn btn-white-fill navbar-btn"><%= t 'Try for Free' %></a>
                         </li>
                     </ul>
 
@@ -163,17 +164,17 @@ function foo(){ console.log("Callback"); }
                 <div class="row">
                     <div class="col-sm-12 text-center">
                         <div class="home-wrapper">
-                            <h1 class="text-white">Trabalhe de forma colaborativa e ágil no desenvolvimento do seu game.</h1>
+                            <h1 class="text-white"><%= t 'Trabalhe de forma colaborativa e ágil no desenvolvimento do seu game.' %></h1>
                             <!-- <h4 class="text-light">Zodkoo is a fully responsive landing page built using the latest Bootstrap framework. It's designed for describing your app, agency or business. The clean and well commented code allows easy customization of the theme.</h4> -->
                             <!-- <div class="type-wrap"> -->
                             <div id="typed-strings">
-                              <span>Aumente a sua <strong>produtividade</strong>!</span>
-                              <p>Ao invés de utilizar varias ferramentas</p>
-                              <p>o X concentra em um único sistema tudo que você e sua equipe precisa para planejar e acompanhar o desenvolvimento de um Game.</p>
+                              <span><%= t 'Aumente a sua <strong>produtividade</strong>!' %></span>
+                              <p><%= t 'Ao invés de utilizar varias ferramentas' %></p>
+                              <p><%= t 'o X concentra em um único sistema tudo que você e sua equipe precisa para planejar e acompanhar o desenvolvimento de um Game.' %></p>
                             </div>
                             <span class="text-light" id="typed" style="white-space:pre;"> </span>
                             <!-- </div> -->
-                            <p><a href="index_6.html" class="btn btn-custom">Get Started</a></p>
+                            <p><a href="index_6.html" class="btn btn-custom"><%= t 'Get Started' %></a></p>
                         </div>
                     </div>
                 </div>
