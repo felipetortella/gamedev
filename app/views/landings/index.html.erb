@@ -321,19 +321,7 @@ function foo(){ console.log("Callback"); }
 
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <form class="text-center" action="http://coderthemes.us13.list-manage.com/subscribe/post?u=0cc5de5f50afa8474a1006b6b&amp;id=e0e46dd0d1"
-                              id="subscribe-form" method="get">
-                            <div class="form-group m-b-0">
-                                <input type="email" class="form-control input-subscribe" id="mce-EMAIL" name="EMAIL"
-                                       placeholder="Enter e-mail address" required>
-                                <label for="mce-EMAIL"></label>
-                            </div>
-
-                            <button type="submit" class="btn btn-white-fill">Subscribe</button>
-                            <p class="text-light">
-                                <small>You can un-subscribe at any time.</small>
-                            </p>
-                        </form>
+                      <%= render 'form', landing: @landing %>
                     </div>
                 </div><!-- End row -->
 
