@@ -113,10 +113,10 @@
                     <!-- Navbar right -->
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="index_6.html"><%= t 'Login' %></a>
+                            <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-us") %></a>
                         </li>
                         <li>
-                            <a href="index_6.html" class="btn btn-white-fill navbar-btn"><%= t 'Try for Free' %></a>
+                          <a href="/br" target="_parent"><%= image_tag("blank.png", :class => "flag flag-br") %></a>
                         </li>
                     </ul>
 
@@ -224,6 +224,9 @@
 
         </div><!-- end row -->
         <div class="row">
+          <div class="col-sm-12">
+            <%= image_tag("macbook.png", :class => "img-responsive") %>
+          </div>
             <div class="col-sm-12">
                 <div class="feat-description">
                     <h4 class="text-muted">Acompanhe</h4>
@@ -233,9 +236,6 @@
                         Modelo Kanban
                       }</p>
                 </div>
-            </div>
-            <div class="col-sm-12">
-              <%= image_tag("macbook.png", :class => "img-responsive") %>
             </div>
         </div><!-- end row -->
       </div>
@@ -334,28 +334,6 @@
             </div> <!-- end container -->
         </section>
         <!-- End Subscribe -->
-
-        <!-- Subscribe -->
-        <section class="section bg-light" id="contact">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <h3 class="title text-muted"><%= t '.contact' %></h3>
-                    </div>
-                </div><!-- End row -->
-
-                <div class="row">
-                    <div class="col-sm-6 col-sm-offset-3">
-                      <%= render 'form', landing: @landing %>
-                    </div>
-                </div><!-- End row -->
-
-            </div> <!-- end container -->
-        </section>
-        <!-- End Subscribe -->
-
-
 
         <!-- FOOTER -->
         <footer class="section bg-gray footer">
