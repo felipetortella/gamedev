@@ -27,13 +27,19 @@ class LandingsController < ApplicationController
     @landing = Landing.new(landing_params)
 
     respond_to do |format|
-      if @landing.save
+      if !Landing.exists?(email: @landing.email)
+        if @landing.save
+          format.html { redirect_to root_path, notice: 'Landing was successfully created.' }
+          format.json { render :show, status: :created, location: @landing }
+          format.js{}
+        else
+          format.html { render :new }
+          format.json { render json: @landing.errors, status: :unprocessable_entity }
+        end
+      else
         format.html { redirect_to root_path, notice: 'Landing was successfully created.' }
         format.json { render :show, status: :created, location: @landing }
         format.js{}
-      else
-        format.html { render :new }
-        format.json { render json: @landing.errors, status: :unprocessable_entity }
       end
     end
   end
