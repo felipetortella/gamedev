@@ -90,7 +90,14 @@
                     <a class="navbar-brand logo" href="http://coderthemes.com/zodkoo_1.1/index.html">
                         X
                     </a>
-
+                    <div class="hidden-md hidden-lg visible-xs-block visible-sm-block">
+                      <a class="navbar-brand logo" href="/en" target="_parent">
+                        <%= image_tag("blank.png", :class => "flag flag-en") %>
+                      </a>
+                      <a class="navbar-brand logo" href="/en" target="_parent">
+                        <%= image_tag("blank.png", :class => "flag flag-br") %>
+                      </a>
+                    </div>
                 </div>
                 <!-- end navbar-header -->
 
@@ -111,9 +118,9 @@
                     </ul>
 
                     <!-- Navbar right -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right hidden-xs">
                         <li>
-                            <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-us") %></a>
+                            <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-en") %></a>
                         </li>
                         <li>
                           <a href="/br" target="_parent"><%= image_tag("blank.png", :class => "flag flag-br") %></a>
