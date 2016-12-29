@@ -20,5 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   features: "Features"
+  subscribe: "Subscribe"
+  landings:
+    index:
+      intro-text: "Trabalhe De Forma Colaborativa E ágil No Desenvolvimento Do Seu Game"
+      plan: "Planeje."
+      plan2: "Crie documentos para o seu game designer de maneira facil e interativa. Com o X é possível criar documentos profissionais mesmo sem ter experiência no assunto."
+      plan3: "GDD"
+      plan4: "Pagina Unica;"
+      plan5: "GDD"
+      intro-text2_html: "Aumente a sua <strong>produtividade</strong>!"
+      contact: "Contact Us"

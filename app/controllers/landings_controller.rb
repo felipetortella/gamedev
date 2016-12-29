@@ -4,7 +4,7 @@ class LandingsController < ApplicationController
   # GET /landings
   # GET /landings.json
   def index
-    @landings = Landing.all
+    @landing = Landing.new
   end
 
   # GET /landings/1
@@ -27,12 +27,19 @@ class LandingsController < ApplicationController
     @landing = Landing.new(landing_params)
 
     respond_to do |format|
-      if @landing.save
-        format.html { redirect_to @landing, notice: 'Landing was successfully created.' }
-        format.json { render :show, status: :created, location: @landing }
+      if !Landing.exists?(email: @landing.email)
+        if @landing.save
+          format.html { redirect_to root_path, notice: 'Landing was successfully created.' }
+          format.json { render :show, status: :created, location: @landing }
+          format.js{}
+        else
+          format.html { render :new }
+          format.json { render json: @landing.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render :new }
-        format.json { render json: @landing.errors, status: :unprocessable_entity }
+        format.html { redirect_to root_path, notice: 'Landing was successfully created.' }
+        format.json { render :show, status: :created, location: @landing }
+        format.js{}
       end
     end
   end
