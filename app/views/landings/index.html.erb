@@ -7,7 +7,7 @@
 
         <link rel="shortcut icon" href="<%= image_url("favicon.ico") %>">
 
-        <title>X</title>
+        <title>Venatus</title>
 
         <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
@@ -88,16 +88,8 @@
 
                     <!-- LOGO -->
                     <a class="navbar-brand logo" href="http://coderthemes.com/zodkoo_1.1/index.html">
-                        X
+                        Venatus
                     </a>
-                    <div class="hidden-md hidden-lg visible-xs-block visible-sm-block">
-                      <a class="navbar-brand logo" href="/en" target="_parent">
-                        <%= image_tag("blank.png", :class => "flag flag-en") %>
-                      </a>
-                      <a class="navbar-brand logo" href="/en" target="_parent">
-                        <%= image_tag("blank.png", :class => "flag flag-br") %>
-                      </a>
-                    </div>
                 </div>
                 <!-- end navbar-header -->
 
@@ -118,13 +110,21 @@
                     </ul>
 
                     <!-- Navbar right -->
-                    <ul class="nav navbar-nav navbar-right hidden-xs">
-                        <li>
-                            <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-en") %></a>
-                        </li>
-                        <li>
-                          <a href="/br" target="_parent"><%= image_tag("blank.png", :class => "flag flag-br") %></a>
-                        </li>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="dropdown">
+                          <a href="index_6.html#" data-toggle="dropdown">
+                              <%= t 'language' %>
+                              <span class="caret"></span>
+                          </a>
+                          <ul class="dropdown-menu arrow">
+                            <li>
+                                <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-us") %></a>
+                            </li>
+                            <li>
+                              <a href="/br" target="_parent"><%= image_tag("blank.png", :class => "flag flag-br") %></a>
+                            </li>
+                          </ul>
+                      </li>
                     </ul>
 
                 </div>
@@ -169,8 +169,7 @@
                     <div class="col-sm-12">
                         <div class="text-center">
                             <div class="title-box-icon">
-                                <i class="pe-7s-medal"></i>
-                                <h3 class="title">Clean and Ultra Modern Design</h3>
+                                <h3 class="title">Venatus</h3>
                             </div>
                         </div>
                     </div>
@@ -257,8 +256,8 @@
 
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h3 class="title">It's designed for describing your app, agency or business</h3>
-                        <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br/> designed for describing your app, agency or business.</p>
+                        <h3 class="title"><%= t '.described_features' %></h3>
+                        <!-- <p class="text-muted sub-title">The clean and well commented code allows easy customization of the theme.It's <br/> designed for describing your app, agency or business.</p> -->
                     </div>
                 </div> <!-- end row -->
 
@@ -293,7 +292,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="features-box">
-                            <i class="pe-7s-date"></i>
+                            <i class="pe-7s-share"></i>
                             <h4>Login GIt ou Google</h4>
                             <p class="text-muted">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                         </div>
@@ -301,7 +300,7 @@
 
                     <div class="col-sm-4">
                         <div class="features-box">
-                            <i class="pe-7s-credit"></i>
+                            <i class="pe-7s-refresh-2"></i>
                             <h4>Integração de equipe</h4>
                             <p class="text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin litera..</p>
                         </div>
@@ -327,8 +326,7 @@
 
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h3 class="title text-white">Be engaged Newsletter</h3>
-                        <p class="text-light sub-title">The clean and well commented code allows easy customization of the theme.It's <br> designed for describing your app, agency or business.</p>
+                        <h3 class="title text-white"><%= t '.be_engaged_newsletter' %></h3>
                     </div>
                 </div><!-- End row -->
 
@@ -345,52 +343,11 @@
         <!-- FOOTER -->
         <footer class="section bg-gray footer">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <h5>Zodkoo</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="index_6.html">Home</a></li>
-                            <li><a href="index_6.html">Features</a></li>
-                            <li><a href="index_6.html">Team</a></li>
-                            <li><a href="index_6.html">FAQ</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <h5>Social</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="index_6.html">Facebook</a></li>
-                            <li><a href="index_6.html">Twitter</a></li>
-                            <li><a href="index_6.html">Behance</a></li>
-                            <li><a href="index_6.html">Dribbble</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <h5>Support</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="index_6.html">Help & Support</a></li>
-                            <li><a href="index_6.html">Privacy Policy</a></li>
-                            <li><a href="index_6.html">Terms & Conditions</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                        <h5>Contact</h5>
-                        <address>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</abbr> (123) 456-7890<br/>
-                            E: <a href="mailto:#">email@email.com</a>
-                        </address>
-                    </div>
-
-                </div> <!-- end row -->
 
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="footer-alt text-center">
-                            <p class="text-muted m-b-0">2016 © Zodkoo</p>
+                            <p class="text-muted m-b-0"><%= t 'contact' %>: contato@venatus.com</p>
                         </div>
                     </div>
                 </div> <!-- end row -->

@@ -22,6 +22,9 @@
 br:
   features: "Funcionalidades"
   subscribe: "Inscrever-se"
+  language: "Idioma"
+  contact: "Contato"
+  un-subscribe_newsletter: "Você pode parar de receber nossas Newsletter a qualquer hora."
   landings:
     index:
       intro-text: "Trabalhe De Forma Colaborativa E ágil No Desenvolvimento Do Seu Game"
@@ -31,4 +34,6 @@ br:
       plan4: "Pagina Unica;"
       plan5: "GDD"
       intro-text2_html: "Aumente a sua <strong>produtividade</strong>!"
-      contact: "Contato"
+      contact-us: "Contato"
+      described_features: 'Features Descritas'
+      be_engaged_newsletter: 'Receba Nossas Newsletter'
