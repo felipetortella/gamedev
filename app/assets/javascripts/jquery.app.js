@@ -59,7 +59,3 @@ function($) {
     "use strict";
     $.Page.init()
 }(window.jQuery);
-
-$(function(){
-  $('.nav-collapse').collapse('hide');
-})
