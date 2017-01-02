@@ -1,7 +1,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
         <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
         <meta name="author" content="Coderthemes">
 
@@ -118,10 +119,10 @@
                           </a>
                           <ul class="dropdown-menu arrow">
                             <li>
-                                <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-us") %></a>
+                                <a href="/en" target="_parent"><%= image_tag("blank.png", :class => "flag flag-us") %> <%= t 'english' %></a>
                             </li>
                             <li>
-                              <a href="/br" target="_parent"><%= image_tag("blank.png", :class => "flag flag-br") %></a>
+                              <a href="/br" target="_parent"><%= image_tag("blank.png", :class => "flag flag-br") %> <%= t 'portuguese' %></a>
                             </li>
                           </ul>
                       </li>

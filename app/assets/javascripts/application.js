@@ -41,3 +41,25 @@ $(function(){
 function newTyped(){ /* A new typed object */ }
 
 function foo(){ console.log("Callback"); }
+
+//on click on navbar - Smooth Scroll To Anchor (requires jQuery Easing plugin)
+$(function(){
+  $("#navbar-menu").on('click', function(event) {
+    console.log("navbar");
+      var $anchor = $(event.target);
+      if ($($anchor.attr('href')).length > 0 && $anchor.is('a.nav-link')) {
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top - 0
+          }, 1500, 'easeInOutExpo');
+          event.preventDefault();
+      }
+  });
+})
+
+//back-to-top button
+$(function(){
+  $('#back-to-top').on('click', function(){
+      $("html, body").animate({ scrollTop: 0 }, 1000);
+      return false;
+  });
+})

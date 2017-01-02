@@ -27,7 +27,7 @@
         $(window).on('load', function() {
             var windowHeight = $(window).height();
             // adding height attr to top section
-            $this.$topSection.css('height', windowHeight);
+            $('#home-fullscreen').css('height', windowHeight);
 
             //init sticky
             $("#sticky-nav").sticky({topSpacing: 0});
@@ -49,24 +49,6 @@
                 $('#back-to-top').fadeOut();
             }
         });
-
-        //on click on navbar - Smooth Scroll To Anchor (requires jQuery Easing plugin)
-        this.$topNavbar.on('click', function(event) {
-            var $anchor = $(event.target);
-            if ($($anchor.attr('href')).length > 0 && $anchor.is('a.nav-link')) {
-                $('html, body').stop().animate({
-                    scrollTop: $($anchor.attr('href')).offset().top - 0
-                }, 1500, 'easeInOutExpo');
-                event.preventDefault();
-            }
-        });
-
-        //back-to-top button
-        $('#back-to-top').click(function(){
-          console.log('click');
-            $("html, body").animate({ scrollTop: 0 }, 1000);
-            return false;
-        });
     },
     //init
     $.Page = new Page, $.Page.Constructor = Page
@@ -77,3 +59,7 @@ function($) {
     "use strict";
     $.Page.init()
 }(window.jQuery);
+
+$(function(){
+  $('.nav-collapse').collapse('hide');
+})
