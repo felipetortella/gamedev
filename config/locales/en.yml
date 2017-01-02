@@ -24,6 +24,8 @@ en:
   subscribe: "Subscribe"
   language: "Language"
   contact: "Contact"
+  english: "English"
+  portuguese: "Portuguese"
   un-subscribe_newsletter: 'You can un-subscribe at any time.'
   landings:
     index:

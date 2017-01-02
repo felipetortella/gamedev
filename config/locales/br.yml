@@ -24,6 +24,8 @@ br:
   subscribe: "Inscrever-se"
   language: "Idioma"
   contact: "Contato"
+  english: "Inglês"
+  portuguese: "Português"
   un-subscribe_newsletter: "Você pode parar de receber nossas Newsletter a qualquer hora."
   landings:
     index:
