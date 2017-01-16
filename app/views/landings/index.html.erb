@@ -106,6 +106,9 @@
                             <a href="#features" target="_parent" class="nav-link"><%= t 'features' %></a>
                         </li>
                         <li>
+                            <a href="#contact" target="_parent" class="nav-link"><%= t '.talk_to_us' %></a>
+                        </li>
+                        <li>
                             <a href="#subscribe" target="_parent" class="nav-link"><%= t 'subscribe' %></a>
                         </li>
                     </ul>
@@ -322,12 +325,51 @@
         <!-- end Features -->
 
         <!-- Subscribe -->
-        <section class="section bg-custom" id="subscribe">
+        <section class="section bg-custom" id="contact">
             <div class="container">
 
                 <div class="row">
                     <div class="col-sm-12 text-center">
-                        <h3 class="title text-white"><%= t '.be_engaged_newsletter' %></h3>
+                        <h3 class="title text-white"><%= t '.talk_to_us' %></h3>
+                    </div>
+                </div><!-- End row -->
+
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <%= form_for (@customer), html: {:class => 'text-center', :remote => true} do |f| %>
+                      <div class="field">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <%= f.text_field :name, :class => 'form-control input-contact', :placeholder => "name" %>
+                         </div>
+                         <div class="col-md-4">
+                           <%= f.text_field :phone, :class => 'form-control input-contact', :type => 'number', :placeholder => "phone" %>
+                         </div>
+                         <div class="col-md-4">
+                           <%= f.text_field :email, :class => 'form-control input-contact', :type => 'email', :placeholder => "email" %>
+                         </div>
+                        <%= f.text_area :message, :class => 'form-control input-contact', :placeholder => "message", :type => "text" %>
+                        </div>
+                      </div>
+
+                      <div class="actions">
+                        <%= f.submit 'submit', :class => 'btn btn-white-fill'%>
+                      </div>
+                    <% end %>
+                    </div>
+                </div><!-- End row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- End Subscribe -->
+
+        <!-- Subscribe -->
+        <section class="section bg-light" id="subscribe">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h3 class="title"><%= t '.be_engaged_newsletter' %></h3>
                     </div>
                 </div><!-- End row -->
 

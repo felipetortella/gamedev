@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :customers
   scope "(:locale)", locale: /en|br/ do
     resources :landings
     get '/:locale' => 'landings#index'

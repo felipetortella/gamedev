@@ -177,6 +177,22 @@ a:hover,a:focus,.a:active {
   color: #ffffff !important;
 }
 
+.btn-green-fill {
+  padding: 8px 24px !important;
+  background-color: #01bf86;
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  border-radius: 50px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.btn-green-fill:hover {
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  background-color: transparent;
+  color: #01bf86 !important;
+}
+
 .btn-white-bordered {
   padding: 8px 24px !important;
   background-color: transparent !important;
@@ -600,8 +616,8 @@ iframe {
 
 .input-subscribe {
   background-color: transparent;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #01bf86;
+  border: 2px solid rgba(1, 191, 134, 0.4);
   height: 50px;
   padding-left: 20px;
   box-shadow: none !important;
@@ -609,6 +625,20 @@ iframe {
 }
 
 .input-subscribe:focus {
+  border: 2px solid rgba(1, 191, 134, 0.6);
+}
+
+.input-contact {
+  background-color: transparent;
+  color: #01bf86;
+  border: 2px solid rgba(1, 255, 255, 0.4);
+  height: 50px;
+  padding-left: 20px;
+  box-shadow: none !important;
+  margin-bottom: 10px;
+}
+
+.input-contact:focus {
   border: 2px solid rgba(255, 255, 255, 0.6);
 }
 

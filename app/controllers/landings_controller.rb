@@ -5,6 +5,7 @@ class LandingsController < ApplicationController
   # GET /landings.json
   def index
     @landing = Landing.new
+    @customer = Customer.new
   end
 
   # GET /landings/1
