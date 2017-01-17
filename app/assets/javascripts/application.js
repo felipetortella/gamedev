@@ -63,3 +63,9 @@ $(function(){
       return false;
   });
 })
+
+$(function(){
+  $( "#language" ).change(function() {
+    window.location.href = "/" + $("#language").val();
+  });
+})
